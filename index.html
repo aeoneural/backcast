@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BackCast - Recast YouTube with Backbone</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/underscore/underscore.js"></script>
+  <script src="node_modules/backbone/backbone.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h5 style="border:none;">
+      <br/><br/>this message will disappear when <em>app</em> view is correctly rendered<br/><br/><br/>
+    </h5>
+  </div>
+
+
+  <script src="src/models/video.js"></script>
+  <script src="src/collections/videos.js"></script>
+  <script src="src/lib/templateUrl.js"></script>
+
+  <script src="src/views/app.js"></script>
+  <script src="src/views/search.js"></script>
+  <script src="src/views/videoList.js"></script>
+  <script src="src/views/videoListEntry.js"></script>
+  <script src="src/views/videoPlayer.js"></script>
+
+  <script>
+    backboneReady(() => {
+      new AppView();
+    });
+  </script>
+
+</body>
+</html>
