@@ -9,6 +9,8 @@ var VideoListView = Backbone.View.extend({
     return this;
   },
   renderVideo: function(video) { 
+    
+    // using el at the end because we want to append an html element which comes from the videolistentryview
     this.$('.video-list').append(new VideoListEntryView({ model: video }).render().el);
   },
 
